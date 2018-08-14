@@ -1,15 +1,78 @@
-body {
-  /*  background-image: url(img/bgcv.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: #FFF;
-    color: #000305;
-    font-size: 87.5%; /* Base font size is 14px */
-    font-family: sans-serif, 'Lucida Sans Unicode';
-    line-height: 1.5;
-    text-align: left;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-/* Go in and sepperate the a from post and mainbar. Using ID perhaps */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*----- END CSS RESET -----*/
+
+
+body {
+    color: #000305;
+    font-size: 16px;
+    line-height: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 82px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    font-size: 2em;
+    margin: 0 0 1rem;
+    line-height: 2rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/*----- Old style -----*/
+
 a   {
     text-decoration: none;
 }
@@ -20,43 +83,24 @@ a:hover, a:visited {
 
 a:hover, a:active {
     background-color: gainsboro;
+    color: #333 !important;
+    text-decoration: none !important;
+    border-radius: 3px;
+    padding: 1px 4px;
 }
 
-.body {
+body {
     margin: 0 auto;
-    width: 70%;
-    clear: both;    
-}
-
-.mainHeader img {
-    width: 40%;
-    height: auto;
-    margin: 2% 0;
+    clear: both;  
+    position: relative;  
 }
 
 .mainHeader nav {
     background-color: gold;
-    height: 40px;
+    min-height: 40px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;    
-}
-
-.mainHeader nav ul {
-    list-style: none;
-    margin: 0 auto;
-}
-
-.mainHeader nav ul li {
-    float: right;
-    display: inline;
-}
-
-.mainHeader nav a:link, .mainHeader nav a:visited {
-    color: darkblue;
-    display: inline-block;
-    padding: 10px 25px;
-    height: 20px;    
 }
 
 
@@ -74,41 +118,7 @@ a:hover, a:active {
 }
 
 
-.mainContent {
-    width: 100%;
-    align-items: center;
-    line-height: 25px;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
-}
-
-.content {
-    width: 70%;
-    float: left;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
-}
 /* Change the color of the topContent*/
-.topContent {
-    background-color: gainsboro;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;  
-    padding: 3% 5%;
-    margin-top: 9px;
-    ;
-}
-
-.bottomContent {
-    background-color: gainsboro;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
-    padding: 3% 5%;
-    margin-top: 2px;
-}
 
 .post-info {
     font-style: italic;
@@ -117,74 +127,50 @@ a:hover, a:active {
 }
 
 /* must adjust the width togehter with margin and padding. Total is 30% */
-.top-sidebar {
-    width: 23%;
-    float: left;
-    background-color: orange;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
-    margin-top: 9px;
-    margin-left: 3%;
-    margin-bottom: 2%;
-    padding: 2% 2%; 
+
+/*----- Header -----*/
+header.mainHeader {
+    margin-bottom: 20px;
 }
 
-
-
-/*another way of writing all margin's are margin: X% Y% Z% A%, witch represents top-left-bottom-right (clockwise) */
-.middle-sidebar {
-    width: 23%;
-    float: left;
-    background-color: orange;
+/*----- Sidebar styling -----*/
+aside {
+    background-color: #f1592a;
     border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
-   
-    margin-left: 3%;
-    margin-bottom: 2%;
-    padding: 2% 2%;       
+    padding: 20px;
+    margin: 0 0 20px;
+    color: white;
+}
+aside a {
+    color: white;
+    text-decoration: underline;
 }
 
-.bottom-sidebar {
-    width: 23%;
-    float: left;
-    background-color: orange;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
-    margin-left: 3%;
-    margin-bottom: 2%;
-    padding: 2% 2%;     
-}
+/*----- Footer -----*/
 
 .mainFooter {
-    width: 100%;
-    height: 40px;
-    float: left;
-    border-radius: 5px;
-    -moz-border-radius 5px;
-    -webkit-border-radius 5px;
     background-color: deepskyblue;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.mainFooter p {
-    width: 92%;
-    margin: 10px auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    padding: 20px;
+    right: 0;
+    text-align: center;
     color: white;
 }
 
+.mainFooter a {
+    color: white;
+    text-decoration: underline;
+}
+
+/*----- * { border: 1px dotted red; } -----*/
 
 /*From here on it is something about making the website responsove, meaning that it will be desplayed correctly on mobile devices. */ 
-@media only screen and (min-width: 150px) and (max-width: 600px) {
+/*----- @media only screen and (min-width: 150px) and (max-width: 600px) {
     
     body {
         background-size: contain 
-            /*playing around with the background here.*/
-    }
-    .body {
         width: 90%;
         font-size: 95%;
     }
@@ -197,20 +183,12 @@ a:hover, a:active {
         height: 160px; 
     }
 
-    .mainHeader nav ul {
-        padding-left: 0
-        }
-
-    .mainHeader nav ul li {
-        width: 100%;
-        text-align: center;
-        }
-
-    .mainHeader nav a:link, .mainHeader nav a:visited {
+    .mainHeader nav a:link, 
+    .mainHeader nav a:visited {
         padding: 10px 25px;
         height: 20px;  
         display: block;
-        }
+    }
     
     .content {
         width: 100%;
@@ -222,11 +200,10 @@ a:hover, a:active {
         display: none;
     }
    
-    /* Here change the top/bottom-content margins for mobile device*/
     .topContent {
         padding: 3% 5%;
         margin-top: 2px;
-        margin-bottom: 3    %;
+        margin-bottom: 3%;
     }
  
     .bottomContent {
@@ -239,6 +216,123 @@ a:hover, a:active {
         padding: 2% 3%; 
     }
 
-}
+} -----*/
     
+
+/*----- NEW STYLE -----*/
+
+/*----- Wrapper Hvor alt indhold er udover footeren -----*/
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+ul {
+    padding: 0;
+}
+
+/*----- Menu -----*/
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu ul {
+    margin: 0 auto;
+}
+.menu li {
+    list-style: none;
+    flex-grow: 1;
+}
+.menu li a {
+    display: block;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 25px;
+    height: 20px;    
+}
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+}
+.logo a {
+    display: block;
+}
+.logo a:hover,
+.logo a:focus {
+    background-color: transparent;
+}
+
+.homeLogo {
+    width: 160px;
+    height: auto;
+}
+
+
+/*----- Main content -----*/
+.mainContent,
+.content {
+    border-radius: 5px;
+    -moz-border-radius 5px;
+    -webkit-border-radius 5px;  
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+.content {
+    margin-right: 20px;    
+}
+
+.sidebar {
+    min-width: 260px;
+    max-width: 340px;
+}
+
+.content article {
+    margin-bottom: 20px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    -moz-border-radius 5px;
+    -webkit-border-radius 5px;  
+    padding: 20px;
+}
+
+/*----- Footer -----*/
+footer.mainFooter {
+
+}
+
+/*----- Cool transition/animation effect -----*/
+.trans, .trans *, a {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 680px) {
+
+    .mainContent {
+        flex-wrap: wrap;
+    }
+    .content {
+        margin-right: 0;
+    }
+    .sidebar {
+        max-width: 100%;
+    }
+
+}
+
     
